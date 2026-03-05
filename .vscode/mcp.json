@@ -1,0 +1,21 @@
+{
+  "inputs": [
+    {
+      "id": "my-secret",
+      "type": "promptString",
+      "description": "Enter your secret value",
+      "password": true
+    }
+  ],
+  "servers": {
+    "echo-server": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["echo-server.js"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "MY_SECRET": "${input:my-secret}"
+      }
+    } 
+  }
+}

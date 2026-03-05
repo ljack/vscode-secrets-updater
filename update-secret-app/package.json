@@ -1,0 +1,4 @@
+{
+  "name": "update-secret-app",
+  "main": "../update-secret.cjs"
+}
